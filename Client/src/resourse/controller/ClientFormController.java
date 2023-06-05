@@ -2,37 +2,33 @@ package resourse.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.application.Platform;
-import javafx.embed.swing.SwingFXUtils;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
+import javafx.scene.text.Text;
+import resourse.model.Client;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 
 public class ClientFormController {
-    public static boolean isImageChoose = false;
-    final int PORT = 4001;
+    public static String ClientName;
+
     Socket socket;
-    //    Socket imgSocket;
     DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;
     String message = "";
-    int i = 10;
-    String path = "";
-    File file;
+    int[] emojiIcons = {0x1F606, 0x1F601, 0x1F602, 0x1F609, 0x1F618, 0x1F610, 0x1F914, 0x1F642, 0x1F635, 0x1F696, 0x1F636, 0x1F980, 0x1F625, 0x1F634, 0x1F641, 0x1F643,};
     @FXML
     private ScrollPane content;
     @FXML
@@ -43,105 +39,109 @@ public class ClientFormController {
     private JFXTextField txtmessage;
     @FXML
     private Label lblClientName;
-//    OutputStream imgOutputStream;
-//    InputStream imgInputStream;
-//    boolean isUsed = false;
+    private Client client;
+    @FXML
+    private ScrollPane spEmojiIcons;
+    @FXML
+    private GridPane gpEmojiIcons;
+
+    public static void receiveMessage(String message, VBox vBox) {
+        HBox hBox = new HBox();
+        hBox.setStyle("-fx-alignment: center-left;-fx-fill-height: true;-fx-min-height: 50;-fx-pref-width: 520;-fx-max-width: 520;-fx-padding: 10");
+        Label messageLbl = new Label(message);
+        messageLbl.setStyle("-fx-background-color:   #E28AEA;-fx-background-radius:15;-fx-font-size: 18;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-left;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
+        hBox.getChildren().add(messageLbl);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                vBox.getChildren().add(hBox);
+            }
+        });
+    }
 
     public void initialize() {
-        Platform.setImplicitExit(false);
-        content.setContent(msgContent);
-//        content.vvalueProperty().bind(msgContent.heightProperty());
-//        content.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
-//        content.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        setEmojisToPane();
+
+        spEmojiIcons.setVisible(false);
+        spEmojiIcons.setStyle("-fx-background-color: coral");
+
         lblClientName.setText(LoginFormController.ClientName);
-        new Thread(() -> {
-            try {
-                socket = new Socket("localhost", PORT);
-                while (true) {
-                    dataOutputStream = new DataOutputStream(socket.getOutputStream());
-                    dataInputStream = new DataInputStream(socket.getInputStream());
-                    message = dataInputStream.readUTF();
-                    System.out.println(message);
 
-                    Platform.runLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (message.startsWith("/")) {
-                                BufferedImage sendImage = null;
-                                try {
-                                    sendImage = ImageIO.read(new File(message));
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                                Image img = SwingFXUtils.toFXImage(sendImage, null);
-                                ImageView imageView = new ImageView(img);
-                                imageView.setFitHeight(150);
-                                imageView.setFitWidth(150);
-                                imageView.setLayoutY(i);
-                                msgContent.getChildren().add(imageView);
-                                i += 150;
-                            } else if (message.startsWith(LoginFormController.ClientName)) {
-                                message = message.replace(LoginFormController.ClientName, "You");
-                                Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #85b6ff; -fx-text-fill: #5c5c5c");
-                                label.setLayoutY(i);
-                                msgContent.getChildren().add(label);
-                            } else {
-                                Label label = new Label(message);
-                                label.setStyle(" -fx-font-family: Ubuntu; -fx-font-size: 20px; -fx-background-color: #CDB4DB; -fx-text-fill: #5c5c5c");
-                                label.setLayoutY(i);
-                                msgContent.getChildren().add(label);
-                            }
-                            i += 30;
-                        }
-                    });
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+        try {
+            client = new Client(new Socket("localhost", 4500), ClientName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        pane.heightProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+                content.setVvalue((Double) newValue);
             }
-        }).start();
-
+        });
+        client.listenForMessage(msgContent);
+        client.clientSendMessage("");
         txtmessage.setOnAction(event -> {
-            try {
-                sendMessage();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            message = txtmessage.getText();
+            sendMessage(message);
         });
 
     }
 
+    private void setEmojisToPane() {
+        int EMOJI_INDEX = 0;
+        for (int j = 0; j < 4; j++) {
+            for (int i = 0; i < 4; i++) {
+                Label text = new Label(new String(Character.toChars(emojiIcons[EMOJI_INDEX++])));
+                text.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        txtmessage.appendText(text.getText());
+                    }
+                });
+                text.setStyle("-fx-font-size: 28px;" +
+                        " -fx-font-family: 'Noto Emoji';" +
+                        "-fx-text-alignment: center;");
+                gpEmojiIcons.add(text, i, j);
+            }
+        }
+    }
+
     @FXML
     void btnSendOnAction(MouseEvent event) throws IOException {
-        sendMessage();
+        spEmojiIcons.setVisible(false);
+        message = txtmessage.getText();
+
+        if (!message.isEmpty()) {
+            sendMessage(message);
+            txtmessage.clear();
+            client.clientSendMessage(message);
+        }
+    }
+
+    private void sendMessage(String message) {
+        HBox hBox = new HBox();
+        hBox.setStyle("-fx-alignment: center-right;-fx-fill-height: true;-fx-min-height: 50;-fx-pref-width: 520;-fx-max-width: 520;-fx-padding: 10");
+        Label messageLbl = new Label(message);
+        messageLbl.setStyle("-fx-background-color:#BF0ECE;-fx-background-radius:15;-fx-font-size: 18;-fx-font-weight: normal;-fx-text-fill: white;-fx-wrap-text: true;-fx-alignment: center-left;-fx-content-display: left;-fx-padding: 10;-fx-max-width: 350;");
+        hBox.getChildren().add(messageLbl);
+        msgContent.getChildren().add(hBox);
     }
 
     @FXML
     void btnimageOnAction(MouseEvent event) {
-        FileChooser chooser = new FileChooser();
-        Stage stage = new Stage();
-        file = chooser.showOpenDialog(stage);
 
-        if (file != null) {
-//            dataOutputStream.writeUTF(file.getPath());
-            path = file.getPath();
-            System.out.println("selected");
-            System.out.println(file.getPath());
-            isImageChoose = true;
-        }
     }
 
-    private void sendMessage() throws IOException {
-        if (isImageChoose) {
-            dataOutputStream.writeUTF(path.trim());
-            dataOutputStream.flush();
-            isImageChoose = false;
+
+    public void emojiOnAction(MouseEvent mouseEvent) {
+        if (spEmojiIcons.isVisible()) {
+            spEmojiIcons.setVisible(false);
         } else {
-            dataOutputStream.writeUTF(lblClientName.getText() + " : " + txtmessage.getText().trim());
-            dataOutputStream.flush();
-            System.out.println(txtmessage.getText());
+            spEmojiIcons.setVisible(true);
+            Text text = new Text(new String(Character.toChars(emojiIcons[4])));
+            text.setStyle("-fx-font-size: 25px; -fx-font-family: 'Noto Emoji';");
+            gpEmojiIcons.add(text, 0, 0);
         }
-        txtmessage.clear();
     }
-
 }

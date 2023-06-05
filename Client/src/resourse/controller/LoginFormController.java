@@ -50,6 +50,7 @@ public class LoginFormController {
             }
 
         }
+        txtUserName.clear();
 
     }
 

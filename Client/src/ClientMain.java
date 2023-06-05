@@ -13,7 +13,7 @@ public class ClientMain extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/resourse/view/loginForm.fxml"))));
-        primaryStage.setTitle("Login");
+        primaryStage.setTitle("PTCD CHAT ROOM");
         primaryStage.setResizable(false);
         primaryStage.setMaximized(false);
         primaryStage.show();

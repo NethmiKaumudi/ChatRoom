@@ -6,10 +6,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="680.0" prefWidth="557.0" styleClass="pane01" stylesheets="@../assests/css/Client.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resourse.controller.ClientFormController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="557.0" styleClass="pane01" stylesheets="@../assests/css/Client.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="resourse.controller.ClientFormController">
    <children>
       <AnchorPane prefHeight="76.0" prefWidth="557.0">
          <children>
@@ -27,7 +30,7 @@
       </AnchorPane>
       <ScrollPane fx:id="content" layoutX="31.0" layoutY="140.0" prefHeight="440.0" prefWidth="496.0">
          <content>
-            <VBox fx:id="msgContent" prefHeight="436.0" prefWidth="495.0" />
+            <VBox fx:id="msgContent" prefHeight="425.0" prefWidth="480.0" />
          </content>
       </ScrollPane>
       <Label fx:id="lblClientName" layoutX="220.0" layoutY="89.0" prefHeight="38.0" prefWidth="97.0" textFill="#ff00fb">
@@ -38,7 +41,7 @@
       <AnchorPane layoutX="31.0" layoutY="597.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="496.0" style="-fx-background-color: white;">
          <children>
             <JFXTextField fx:id="txtmessage" focusColor="WHITE" layoutX="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="42.0" prefWidth="361.0" promptText="Message.........." style="-fx-background-color: white;" styleClass="pane01" stylesheets="@../assests/css/Client.css" unFocusColor="WHITE" />
-            <ImageView fitHeight="49.0" fitWidth="49.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="49.0" fitWidth="49.0" layoutY="-1.0" onMouseDragged="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assests/img/smily.png" />
                </image>
@@ -55,5 +58,23 @@
             </ImageView>
          </children>
       </AnchorPane>
+      <ScrollPane fx:id="spEmojiIcons" layoutX="81.0" layoutY="553.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="243.0">
+         <content>
+            <GridPane fx:id="gpEmojiIcons" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="208.0" prefWidth="226.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="52.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="42.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="57.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
