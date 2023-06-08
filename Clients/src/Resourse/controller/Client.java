@@ -1,84 +1,72 @@
 package Resourse.controller;
 
-import javafx.scene.layout.VBox;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Arrays;
+import java.util.ArrayList;
 
-public class Client {
-    public String ClientName;
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+//Extending the Thread class in the Client class allows to create
+// separate thread of execution for each client in this chat
+public class Client extends Thread {
+    private ArrayList<Client> clients;
+    //    represents the socket connection for the current client
     private Socket socket;
-    private BufferedReader bufferedReader;
-    private BufferedWriter bufferedWriter;
+    //    This variable is used to read incoming messages from the client.
+    private BufferedReader reader;
+    //This variable is used to send messages to the client.
+    private PrintWriter writer;
 
-    public Client(Socket socket, String ClientName) {
+    public Client(Socket socket, ArrayList<Client> clients) {
         try {
             this.socket = socket;
-            this.ClientName = ClientName;
-            this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this.clients = clients;
+            this.reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this.writer = new PrintWriter(socket.getOutputStream(), true);
         } catch (IOException e) {
             e.printStackTrace();
-            closeEverything(socket, bufferedWriter, bufferedReader);
         }
     }
 
-    public void clientSendImage(byte[] imageArray, String format, String fileName) {
-        String imageString = Arrays.toString(imageArray);
+    public void run() {
         try {
-            bufferedWriter.write(imageString);
-            bufferedWriter.newLine();
-            bufferedWriter.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-            closeEverything(socket, bufferedWriter, bufferedReader);
-        }
-    }
-
-    public void clientSendMessage(String message) {
-        try {
-            bufferedWriter.write(ClientName + " : " + message);
-            bufferedWriter.newLine();
-            bufferedWriter.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-            closeEverything(socket, bufferedWriter, bufferedReader);
-        }
-    }
-
-    public void listenForMessage(VBox vBox) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (socket.isConnected()) {
-                    try {
-                        String message = bufferedReader.readLine();
-                        ClientFormController.receiveMessage(message, vBox);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        closeEverything(socket, bufferedWriter, bufferedReader);
-                        break;
-                    }
+            String msg;
+            while ((msg = reader.readLine()) != null) {
+                //If the received message is "exit", the loop breaks, and the thread terminates.
+                if (msg.equalsIgnoreCase("exit")) {
+                    System.out.println("Client left chat..............");
+                    break;
                 }
+                for (Client cl : clients) {
+                    cl.writer.println(msg);
+                }
+                System.out.println(msg);
             }
-        }).start();
+        } catch (Exception e) {
+            // e.printStackTrace();
+            //In the finally block, the BufferedReader, PrintWriter, and socket are closed
+        } finally {
+            try {
+                reader.close();
+                writer.close();
+                socket.close();
+                System.out.println("Client left chat..............");
+
+            } catch (IOException e) {
+                // e.printStackTrace();
+            }
+        }
+
     }
 
-    //in here Terminate socket, reader and writer
-    public void closeEverything(Socket socket, BufferedWriter bufferedWriter, BufferedReader bufferedReader) {
-        try {
-            if (bufferedReader != null) {
-                bufferedReader.close();
-            }
-            if (bufferedWriter != null) {
-                bufferedWriter.close();
-            }
-            if (socket != null) {
-                socket.close();
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }

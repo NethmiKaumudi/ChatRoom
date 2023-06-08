@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54086894-159b-4557-9db7-4dfaceebd23a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/GroupChat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_101.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/Clients.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/Clients.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/css/server.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/emojiicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/purpchat icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/send.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/usericon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/controller/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/controller/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/controller/ClientFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/controller/ClientFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/controller/ClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/view/ClientForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/view/ClientForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/view/loginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/view/loginForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Resourse/controller/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/css/Client.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/chat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/emojiicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/imageiconn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/pt icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/purpchat icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/send.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/sendd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/smily.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/user2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/assests/img/usericon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/lib/jfoenix-8.0.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/view/ClientForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Client/resourse/view/loginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/ClientMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/css/Client.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/css/server.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/chat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/emojiicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/imageiconn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/pt icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/purpchat icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/send.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/sendd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/smily.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/user2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/assests/img/usericon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/LoginFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/lib/jfoenix-8.0.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/view/ClientForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/view/loginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/ClientMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/ServerMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/css/Client.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/css/server.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/chat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/emojiicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/imageiconn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/pt icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/purpchat icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/send.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/sendd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/smily.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/user2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/assests/img/usericon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/Client$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/ClientFormController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/ClientFormController$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/ClientFormController$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/ClientFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/ClientHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/LoginFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/controller/ServerFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/lib/jfoenix-8.0.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/view/ClientForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/view/ServerForm1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroupChat/lk/ijse/GroupChat/view/loginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/css/server.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/chat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/chat1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/emojiicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/hand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/image.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/imageiconn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/logout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/pt icon.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/purpchat icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/send.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/sendd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/smily.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/user2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/assests/img/usericon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/resourse/controller/Server.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QpH1JLDUrus0FmEsJr8FYd1FM6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChatRoomPlayTech" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Resourse.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ClientMain">
+    <configuration name="ClientMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClientMain" />
+      <module name="Clients" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ServerMain" />
+      <module name="Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClientMain" />
+        <item itemvalue="Application.ServerMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54086894-159b-4557-9db7-4dfaceebd23a" name="Changes" comment="" />
+      <created>1686043386094</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686043386094</updated>
+      <workItem from="1686043387699" duration="5644000" />
+      <workItem from="1686094838624" duration="4978000" />
+      <workItem from="1686113780521" duration="728000" />
+      <workItem from="1686201954225" duration="3451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

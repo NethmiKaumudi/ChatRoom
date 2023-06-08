@@ -1,5 +1,6 @@
 package Resourse.controller;
 
+
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LoginFormController {
+    public static String ClientName;
 
     @FXML
     private AnchorPane pane;
@@ -40,7 +42,8 @@ public class LoginFormController {
             if (UserNameMatcher.matches()) {
 
             }
-            ClientFormController.ClientName = txtUserName.getText();
+//            ClientFormController.ClientName = txtUserName.getText();
+            ClientName=txtUserName.getText();
             Stage stage1 = new Stage();
             try {
                 stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/Resourse/view/ClientForm.fxml"))));
