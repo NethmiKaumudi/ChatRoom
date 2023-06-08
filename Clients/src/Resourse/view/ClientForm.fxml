@@ -51,7 +51,7 @@
                   <Image url="@../assests/img/imageiconn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="btnSend" fitHeight="49.0" fitWidth="38.0" layoutX="457.0" layoutY="5.0" onMouseClicked="#btnSendOnAction" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="49.0" fitWidth="38.0" layoutX="457.0" layoutY="5.0" onMouseClicked="#btnSendOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assests/img/sendd.png" />
                </image>

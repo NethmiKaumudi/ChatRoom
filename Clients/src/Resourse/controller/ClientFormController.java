@@ -45,12 +45,10 @@ public class ClientFormController extends Thread {
     private ScrollPane spEmojiIcons;
     @FXML
     private GridPane gpEmojiIcons;
-    @FXML
-    private ImageView btnSend;
     private FileChooser fileChooser;
     private File filePath;
 
-    public void initialize() throws IOException {
+    public void initialize() {
         String clientName = LoginFormController.ClientName;
         this.lblClientName.setText(clientName);
         setEmojisToPane();
@@ -78,8 +76,8 @@ public class ClientFormController extends Thread {
         try {
             while (true) {
 
-                String msg = reader.readLine();
-                String[] tokens = msg.split(" ");
+                String messages = reader.readLine();
+                String[] tokens = messages.split(" ");
                 String cmd = tokens[0];
 
 
@@ -89,10 +87,10 @@ public class ClientFormController extends Thread {
                 }
 
 
-                String[] msgToAr = msg.split(" ");
+                String[] messageToArr = messages.split(" ");
                 String st = "";
-                for (int i = 0; i < msgToAr.length - 1; i++) {
-                    st += msgToAr[i + 1] + " ";
+                for (int i = 0; i < messageToArr.length - 1; i++) {
+                    st += messageToArr[i + 1] + " ";
                 }
 
 
@@ -105,11 +103,8 @@ public class ClientFormController extends Thread {
 
 
                 if (firstChars.equalsIgnoreCase("img")) {
-                    //for the Images
-
+                    //for the Images.
                     st = st.substring(3, st.length() - 1);
-
-
                     File file = new File(st);
                     Image image = new Image(file.toURI().toString());
 
@@ -148,8 +143,6 @@ public class ClientFormController extends Thread {
                 } else {
 
                     TextFlow tempFlow = new TextFlow();
-
-
                     if (!cmd.equalsIgnoreCase(lblClientName.getText() + ":")) {
                         Text txtName = new Text(cmd + " ");
                         txtName.getStyleClass().add("txtName");
@@ -249,7 +242,7 @@ public class ClientFormController extends Thread {
     }
 
     @FXML
-    void btnimageOnAction(MouseEvent event) throws IOException {
+    void btnimageOnAction(MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");

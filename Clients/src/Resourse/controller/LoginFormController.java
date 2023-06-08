@@ -43,7 +43,7 @@ public class LoginFormController {
 
             }
 //            ClientFormController.ClientName = txtUserName.getText();
-            ClientName=txtUserName.getText();
+            ClientName = txtUserName.getText();
             Stage stage1 = new Stage();
             try {
                 stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/Resourse/view/ClientForm.fxml"))));
