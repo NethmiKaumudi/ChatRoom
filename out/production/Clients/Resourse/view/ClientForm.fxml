@@ -33,7 +33,7 @@
             <VBox fx:id="msgContent" prefHeight="453.0" prefWidth="480.0" />
          </content>
       </ScrollPane>
-      <Label fx:id="lblClientName" layoutX="220.0" layoutY="89.0" prefHeight="38.0" prefWidth="97.0" textFill="#ff00fb">
+      <Label fx:id="lblClientName" layoutX="92.0" layoutY="72.0" prefHeight="42.0" prefWidth="97.0" textFill="#ff00fb">
          <font>
             <Font size="24.0" />
          </font>
@@ -51,7 +51,7 @@
                   <Image url="@../assests/img/imageiconn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="btnSend" fitHeight="49.0" fitWidth="38.0" layoutX="457.0" layoutY="5.0" onMouseClicked="#btnSendOnAction" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="49.0" fitWidth="38.0" layoutX="457.0" layoutY="5.0" onMouseClicked="#btnSendOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assests/img/sendd.png" />
                </image>
@@ -76,5 +76,10 @@
             </ScrollPane>
          </children>
       </AnchorPane>
+      <ImageView fitHeight="84.0" fitWidth="61.0" layoutX="31.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/img/userr2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -110,8 +110,8 @@ public class ClientFormController extends Thread {
 
                     ImageView imageView = new ImageView(image);
 
-                    imageView.setFitHeight(150);
-                    imageView.setFitWidth(200);
+                    imageView.setFitHeight(120);
+                    imageView.setFitWidth(150);
 
 
                     HBox hBox = new HBox(10);

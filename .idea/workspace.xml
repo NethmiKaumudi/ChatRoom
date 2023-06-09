@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54086894-159b-4557-9db7-4dfaceebd23a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Clients/src/Resourse/assests/img/userr2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/controller/ClientFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/controller/ClientFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clients/src/Resourse/view/ClientForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/src/Resourse/view/ClientForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Clients/Resourse/controller/ClientFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Clients/Resourse/view/ClientForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Clients/Resourse/view/ClientForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Server/ServerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Server/ServerMain.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +41,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChatRoomPlayTech" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Clients/src/Resourse/assests/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FX\GroupChat\Clients\src\Resourse\assests\img" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Resourse.controller" />
     </key>
@@ -80,7 +88,8 @@
       <workItem from="1686043387699" duration="5644000" />
       <workItem from="1686094838624" duration="4978000" />
       <workItem from="1686113780521" duration="728000" />
-      <workItem from="1686201954225" duration="4500000" />
+      <workItem from="1686201954225" duration="4949000" />
+      <workItem from="1686332107220" duration="2694000" />
     </task>
     <servers />
   </component>
